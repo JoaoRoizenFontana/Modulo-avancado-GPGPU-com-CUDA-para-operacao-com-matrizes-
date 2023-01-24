@@ -1,0 +1,74 @@
+Pedro Arduini - 211032
+João Roizen - 1710431
+
+ ./matrix_lib_test 5.0 1024 1024 1024 1024 256 4096 floats_256_2.0f.dat floats_256_5.0f.dat result1.dat result2.dat
+Valores aceitos com sucesso
+
+Lendo matriz A por arquivo...
+
+Lendo matriz B por arquivo...
+
+Preenchendo matriz...
+
+Multiplicando matriz A por 5.000...
+
+Multiplicando matriz A por matriz B...
+
+==========================================================================================================================
+Tempo total para leitura das matrizes: (48.853027 ms) | (0.048853 s) | (0.000814 min)
+
+Tempo total para multiplicacao escalar: (1.779000 ms) | (0.001779 s) | (0.000030 min)
+Tempo total para multiplicacao de matrizes A por B: (46.196999 ms) | (0.046197 s) | (0.000770 min)
+
+Tempo total do programa: (752.343018 ms) | (0.752343 s) | (0.012539 min)
+==========================================================================================================================
+
+
+./matrix_lib_test 5.0 2048 2048 2048 2048 1024 65535 floats_256_2.0f.dat floats_256_5.0f.dat result1.dat result2.dat
+Erro! Valores utilizados sao os default
+                    
+Lendo matriz A por arquivo...
+
+Lendo matriz B por arquivo...
+
+Preenchendo matriz...
+
+Multiplicando matriz A por 5.000...
+
+Multiplicando matriz A por matriz B...
+cudaMemcpy (d_c -> h_c) returned error an illegal memory access was encountered (code 77), line(237)
+Erro função de multiplar matriz A por matriz B
+==========================================================================================================================
+Tempo total para leitura das matrizes: (199.529999 ms) | (0.199530 s) | (0.003326 min)
+
+Tempo total para multiplicacao escalar: (6.949000 ms) | (0.006949 s) | (0.000116 min)
+Tempo total para multiplicacao de matrizes A por B: (6.327000 ms) | (0.006327 s) | (0.000105 min)
+
+Tempo total do programa: (493617.468750 ms) | (493.617462 s) | (8.226958 min)
+==========================================================================================================================
+
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                4
+On-line CPU(s) list:   0-3
+Thread(s) per core:    1
+Core(s) per socket:    4
+Socket(s):             1
+NUMA node(s):          1
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 94
+Model name:            Intel(R) Xeon(R) CPU E3-1225 v5 @ 3.30GHz
+Stepping:              3
+CPU MHz:               3699.810
+CPU max MHz:           3700,0000
+CPU min MHz:           800,0000
+BogoMIPS:              6624.00
+Virtualization:        VT-x
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              256K
+L3 cache:              8192K
+NUMA node0 CPU(s):     0-3
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx rdseed adx smap clflushopt xsaveopt xsavec xgetbv1 dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear spec_ctrl intel_stibp flush_l1d
